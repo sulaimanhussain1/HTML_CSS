@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>back-face visibility</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: lightgray;
+        }
+        .as {
+            height: 300px;
+            width: 300px;
+            border: 0px solid black;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: -150px;
+            perspective: 500px;
+        }
+        .ad {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            transition: transform 1s;
+            transform-style: preserve-3d;
+        }
+        .as:hover .ad {
+            transform: rotateY(180deg);
+        }
+        .fr,
+        .bk {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background-color: white;
+            color: turquoise;
+            font-size: 60px;
+            text-align: center;
+            line-height: 300px;
+            backface-visibility: hidden;
+        }
+        .bk {
+            background-color:turquoise;
+            color: white;
+            transform: rotateY(180deg);
+            backface-visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <h1>BACK-FACE VISIBILIY</h1>
+    <h2><q>Move the cursor to the Sulaiman</q></h2>
+    <div class="as">
+        <div class="ad">
+            <div class="fr">SULAIMAN</div>
+            <div class="bk">HUSSAIN</div>
+        </div>
+
+    </div>
+</body>
+</html>
