@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation fill mode</title>
+    <style>
+        .card , .div{
+            width: 150px;
+            height: 150px;
+            background-color: black;
+            margin-left: 200px;
+            font-size: 70px;
+            text-align: center ;
+            animation-name: stud;
+            animation-duration: 4s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-fill-mode: both;
+        }
+
+        @keyframes stud {
+            0% {background-color: yellow;width: 250px;}
+            50% {background-color:green;width: 350px;}
+            75% {background-color: orange;width: 450px;}
+            100% {background-color:red;width: 550px;}
+        }
+        q {
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">ANIMATION FILL MODE</h1>
+    <div class="card"></div><br><br>
+    <div class="div"></div>
+    <q>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas sapiente ex nihil nam labore ipsum est porro quasi soluta neque?</q>
+</body>
+</html>
